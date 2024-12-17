@@ -1,8 +1,8 @@
 #===============================================================================================================
 # NeverSink's Indepth Loot Filter - for Path of Exile 2 Maven Edition
 #===============================================================================================================
-# VERSION:  0.2.0B
-# TYPE:     Strict
+# VERSION:  0.2.1Maven
+# TYPE:     NONE
 # STYLE:    DEFAULT
 # AUTHOR:   NeverSink, AndrzejKebab
 #
@@ -413,7 +413,7 @@ SetBackgroundColor 76 51 12
 PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 2 White Star
-CustomAlertSound "good.ogg" 283
+CustomAlertSound "Maven_good.ogg" 283
 
 Show
 Class "Currency"
@@ -526,7 +526,7 @@ PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Circle
 DisableDropSound True
-CustomAlertSound "essence.ogg" 283
+CustomAlertSound "Maven_essence.ogg" 283
 
 Show
 Class "Currency"
@@ -534,6 +534,16 @@ BaseType "Breach Splinter" " Artifact"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 MinimapIcon 2 Grey Circle
+
+Show
+BaseType "Gold Key" "Silver Key" "Bronze Key"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 2 White Circle
+SetFontSize 40
 
 Show
 Class "Currency"
