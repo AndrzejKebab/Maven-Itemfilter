@@ -206,7 +206,7 @@ SetBorderColor 255 101 41 255
 PlayEffect White
 MinimapIcon 2 White Circle
 DisableDropSound True
-CustomAlertSound "uu_brutal.mp3" 300
+CustomAlertSound "Maven_uu_brutal.mp3" 300
 
 Show
 Class "Currency"
@@ -218,7 +218,7 @@ SetBackgroundColor 249 150 25 255
 PlayEffect White
 MinimapIcon 2 White Circle
 DisableDropSound True
-CustomAlertSound "map_high.mp3" 283
+CustomAlertSound "Maven_map_high.mp3" 283
 
 Show
 Class "Currency"
@@ -230,7 +230,7 @@ SetBackgroundColor 253 199 33 255
 PlayEffect White
 MinimapIcon 0 Yellow Circle
 DisableDropSound True
-CustomAlertSound "map_low.mp3" 283
+CustomAlertSound "Maven_map_low.mp3" 283
 
 Show
 Class "Currency"
@@ -243,7 +243,7 @@ PlayAlertSound 6 300
 PlayEffect Orange
 MinimapIcon 0 Red Star
 DisableDropSound True
-CustomAlertSound "divine.mp3" 283
+CustomAlertSound "Maven_divine.mp3" 283
 
 Show
 Class "Currency"
@@ -254,7 +254,7 @@ SetBorderColor 0 0 0 255
 SetBackgroundColor 255 75 0 255
 MinimapIcon 0 Red Star
 DisableDropSound True
-CustomAlertSound "map_high.mp3" 283
+CustomAlertSound "Maven_map_high.mp3" 283
 
 Show
 Class "Currency"
@@ -267,7 +267,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 DisableDropSound True
-CustomAlertSound "exalted.mp3" 283
+CustomAlertSound "Maven_exalted.mp3" 283
 
 Show
 Class "Currency"
@@ -292,7 +292,7 @@ PlayAlertSound 1 300
 PlayEffect White
 MinimapIcon 1 White Circle
 DisableDropSound True
-CustomAlertSound "special_mine.mp3" 300
+CustomAlertSound "Maven_special_mine.mp3" 300
 
 Show
 Class "Currency"
@@ -305,7 +305,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 DisableDropSound True
-CustomAlertSound "you did well.mp3" 283
+CustomAlertSound "Maven_you did well.mp3" 283
 
 #--------------------------
 # Shards
@@ -338,7 +338,7 @@ PlayAlertSound 2 300
 PlayEffect Yellow
 MinimapIcon 1 White Circle
 DisableDropSound True
-CustomAlertSound "map_medium.mp3" 283
+CustomAlertSound "Maven_map_medium.mp3" 283
 
 Show
 Class "Currency"
@@ -350,7 +350,7 @@ SetBackgroundColor 213 159 0 255
 PlayEffect White
 MinimapIcon 2 White Circle
 DisableDropSound True
-CustomAlertSound "map_high.mp3" 283
+CustomAlertSound "Maven_map_high.mp3" 283
 
 #--------------------------
 # Quality
@@ -373,7 +373,7 @@ SetBackgroundColor 0 150 255
 PlayEffect Blue
 PlayAlertSound 3 300
 MinimapIcon 1 Blue Circle
-CustomAlertSound "oh_amazing.mp3" 300
+CustomAlertSound "Maven_oh_amazing.mp3" 300
 
 
 Show
@@ -386,7 +386,7 @@ SetBackgroundColor 255 30 30
 PlayAlertSound 1 300
 PlayEffect Red
 MinimapIcon 1 Red Star
-CustomAlertSound "ah_beautiful.mp3" 300
+CustomAlertSound "Maven_ah_beautiful.mp3" 300
 
 #--------------------------
 # Socettables
@@ -426,7 +426,7 @@ PlayAlertSound 3 300
 PlayEffect White
 MinimapIcon 1 Orange Star
 DisableDropSound True
-CustomAlertSound "ah_worth_await.mp3" 283
+CustomAlertSound "Maven_ah_worth_await.mp3" 283
 
 Show
 Class "Currency"
@@ -439,7 +439,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 DisableDropSound True
-CustomAlertSound "that_was_worthaw.mp3" 283
+CustomAlertSound "Maven_that_was_worthaw.mp3" 283
 
 #--------------------------
 # Delirium
@@ -586,7 +586,7 @@ SetBorderColor 255 255 255
 SetFontSize 35
 MinimapIcon 1 Red Circle
 DisableDropSound True
-CustomAlertSound "map_high.mp3" 300
+CustomAlertSound "Maven_map_high.mp3" 300
 
 Show
 WaystoneTier < 5
@@ -598,7 +598,7 @@ SetBorderColor 255 255 255
 SetFontSize 35
 MinimapIcon 1 Yellow Circle
 DisableDropSound True
-CustomAlertSound "map_medium.mp3" 300
+CustomAlertSound "Maven_map_medium.mp3" 300
 
 Show
 BaseType "Waystone"
@@ -611,7 +611,7 @@ MinimapIcon 1 White Square
 SetFontSize 40
 MinimapIcon 1 White Circle
 DisableDropSound True
-CustomAlertSound "map_low.mp3" 300
+CustomAlertSound "Maven_map_low.mp3" 300
 
 #--------------------------
 # Value Rares
