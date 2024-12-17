@@ -1,8 +1,10 @@
 #===============================================================================================================
-# NeverSink's Indepth Loot Filter - for Path of Exile
+# NeverSink's Indepth Loot Filter - for Path of Exile 2 Maven Edition
 #===============================================================================================================
-# VERSION:  0.2.0
-# AUTHOR:   NeverSink
+# VERSION:  0.2.0B
+# TYPE:     Strict
+# STYLE:    DEFAULT
+# AUTHOR:   NeverSink, AndrzejKebab
 #
 # This is a mini-filter designed for early PoE2 EA gameplay. I will eventually replace it with a full-fledged filter
 # With FilterBlade.xyz support. This filter focuses more on highlighting loot, rather than hiding
@@ -23,35 +25,17 @@ SetBorderColor 175 96 37 255
 SetBackgroundColor 53 13 13 255
 PlayAlertSound 3 300
 PlayEffect Brown
-MinimapIcon 1 Brown Star
+MinimapIcon 2 Brown Star
 SetFontSize 40
-
-## Divine Orb Style
-Show
-Class "Currency"
-BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
-SetFontSize 45
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-
-Show
-BaseType == "Distilled Isolation" "Distilled Suffering"
-SetFontSize 45
-SetTextColor 255 0 0 255
-SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 0 Red Star
-
 
 #--------------------------
 # Gold
 #--------------------------
+
+Show
+BaseType == "Gold"
+SetTextColor 238 191 4
+SetBorderColor 238 191 4
 
 Show
 AreaLevel >= 70
@@ -68,12 +52,6 @@ BaseType == "Gold"
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
 PlayEffect Orange Temp
-
-Show
-BaseType == "Gold"
-SetTextColor 180 180 180
-SetBorderColor 0 0 0 255
-SetBackgroundColor 0 0 0 180
 
 #--------------------------
 # Uncut Gems
@@ -196,22 +174,301 @@ SetTextColor 0 240 190
 PlayEffect Cyan Temp
 
 #--------------------------
-# Scroll of Wisdom High Level Hiding
+# Currency
 #--------------------------
 
-Hide
-BaseType "Scroll of Wisdom"
-AreaLevel >= 65
-Rarity <= Magic
-
-#--------------------------
-# Socketables and Special Character Equipment
-#--------------------------
-
-# Currency Tier A: Gemcutter, Annullment
 Show
 Class "Currency"
-BaseType "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
+BaseType  "Orb of Transmutation"
+SetFontSize 31
+SetTextColor 0 0 0 255
+SetBorderColor 190 178 135 0
+SetBackgroundColor 200 180 50 255
+PlayAlertSound 2 300
+DisableDropSound True
+
+Show
+BaseType "Orb of Augmentation"
+SetFontSize 34
+SetTextColor 29 25 13 255
+SetBorderColor 170 158 130 0
+SetBackgroundColor 190 140 0 255
+PlayAlertSound 2 300
+DisableDropSound True
+
+Show
+Class "Currency"
+BaseType "Orb of Alchemy"
+SetFontSize 38
+SetTextColor 0 0 0 255
+SetBackgroundColor 236 163 26 255
+SetBorderColor 255 101 41 255
+PlayEffect White
+MinimapIcon 2 White Circle
+DisableDropSound True
+CustomAlertSound "uu_brutal.mp3" 300
+
+Show
+Class "Currency"
+BaseType "Regal Orb"
+SetFontSize 38
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 249 150 25 255
+PlayEffect White
+MinimapIcon 2 White Circle
+DisableDropSound True
+CustomAlertSound "map_high.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Chaos Orb"
+SetFontSize 37
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 253 199 33 255
+PlayEffect White
+MinimapIcon 0 Yellow Circle
+DisableDropSound True
+CustomAlertSound "map_low.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Divine"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Orange
+MinimapIcon 0 Red Star
+DisableDropSound True
+CustomAlertSound "divine.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Vaal Orb"
+SetFontSize 38
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 255 75 0 255
+MinimapIcon 0 Red Star
+DisableDropSound True
+CustomAlertSound "map_high.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Exalted Orb"
+SetFontSize 40
+SetTextColor 255 105 0
+SetBorderColor 255 105 0
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+DisableDropSound True
+CustomAlertSound "exalted.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Orb of Annulment"
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 1 300
+PlayEffect White
+MinimapIcon 1 White Circle
+DisableDropSound True
+
+Show
+Class "Currency"
+BaseType "Orb of Chance"
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35 255
+PlayAlertSound 1 300
+PlayEffect White
+MinimapIcon 1 White Circle
+DisableDropSound True
+CustomAlertSound "special_mine.mp3" 300
+
+Show
+Class "Currency"
+BaseType "Mirror"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+DisableDropSound True
+CustomAlertSound "you did well.mp3" 283
+
+#--------------------------
+# Shards
+#--------------------------
+
+Show
+Class "Currency"
+BaseType "Transmutation Shard"
+PlayAlertSound 2 150
+DisableDropSound True
+
+Show
+Class "Currency"
+BaseType "Artificer's Shard"
+SetFontSize 35
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 180 180 180 255
+PlayAlertSound 2 150
+DisableDropSound True
+
+Show
+Class "Currency"
+BaseType "Regal Shard"
+SetFontSize 35
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 210 178 135 255
+PlayAlertSound 2 300
+PlayEffect Yellow
+MinimapIcon 1 White Circle
+DisableDropSound True
+CustomAlertSound "map_medium.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Chance Shard"
+SetFontSize 37
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 213 159 0 255
+PlayEffect White
+MinimapIcon 2 White Circle
+DisableDropSound True
+CustomAlertSound "map_high.mp3" 283
+
+#--------------------------
+# Quality
+#--------------------------
+
+Show
+Class "Currency"
+BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Glassblower's Bauble"
+SetFontSize 40
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+SetBackgroundColor 0 150 255
+PlayEffect Blue
+PlayAlertSound 3 300
+MinimapIcon 1 Blue Circle
+CustomAlertSound "oh_amazing.mp3" 300
+
+
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism"
+SetFontSize 40
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 255 30 30
+PlayAlertSound 1 300
+PlayEffect Red
+MinimapIcon 1 Red Star
+CustomAlertSound "ah_beautiful.mp3" 300
+
+#--------------------------
+# Socettables
+#--------------------------
+
+Show
+Class "Currency"
+BaseType "Artificer's Orb"
+SetFontSize 40
+SetTextColor 0 0 0
+SetBorderColor 0 0 0
+SetBackgroundColor 180 180 180 255
+PlayEffect Grey
+PlayAlertSound 2 300
+MinimapIcon 1 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Lesser Jeweller's Orb"
+SetFontSize 40
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 2 White Star
+CustomAlertSound "good.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Greater Jeweller's Orb"
+SetFontSize 40
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 190 140 90 255
+PlayAlertSound 3 300
+PlayEffect White
+MinimapIcon 1 Orange Star
+DisableDropSound True
+CustomAlertSound "ah_worth_await.mp3" 283
+
+Show
+Class "Currency"
+BaseType "Perfect Jeweller's Orb"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+DisableDropSound True
+CustomAlertSound "that_was_worthaw.mp3" 283
+
+#--------------------------
+# Delirium
+#--------------------------
+
+Show
+Class "Currency"
+BaseType "Simulacrum Splinter"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 100
+PlayEffect White Temp
+MinimapIcon 1 White Kite
+SetFontSize 35
+
+Show
+BaseType == "Distilled Isolation" "Distilled Suffering"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Class "Currency"
+BaseType "Distilled Fear" "Distilled Despair"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
@@ -220,40 +477,9 @@ PlayEffect White
 MinimapIcon 1 Yellow Circle
 SetFontSize 45
 
-# Currency Tier B: Exalt
-Show
-Class "Currency"
-BaseType "Exotic Coinage" "Exalted Orb"
-SetTextColor 255 207 92
-SetBorderColor 255 207 92
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
-PlayEffect Yellow
-MinimapIcon 1 Yellow Circle
-SetFontSize 45
-
-# Currency Tier B: Regal, Vaal ...
-Show
-Class "Currency"
-BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
-PlayEffect White
-MinimapIcon 2 White Circle
-SetFontSize 40
-
-Show
-Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 100
-PlayEffect White Temp
-MinimapIcon 1 White Kite
-SetFontSize 35
+#--------------------------
+# Omens
+#--------------------------
 
 Show
 Class "Omen"
@@ -266,46 +492,55 @@ PlayEffect White
 MinimapIcon 2 White Circle
 SetFontSize 40
 
+#--------------------------
+# Scroll of Wisdom High Level Hiding
+#--------------------------
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel >= 65
+Rarity <= Magic
+
+#--------------------------
+# Other
+#--------------------------
+
 Show
 Class "Currency"
-BaseType "Distilled" "Catalyst" "Essence of"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
+BaseType "Exotic Coinage"
+SetTextColor 255 207 92
+SetBorderColor 255 207 92
 SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Yellow
+MinimapIcon 1 Yellow Circle
+SetFontSize 45
+
+Show
+Class "Currency"
+BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
+SetTextColor 255 207 132
+SetBorderColor 0 0 128
+SetBackgroundColor 30 144 255
 PlayAlertSound 2 300
 PlayEffect White
-MinimapIcon 2 White Circle
-SetFontSize 40
-
-# Currency Tier C: Vaal, Chaos, Exalt, Exotic
-Show
-AreaLevel >= 70
-Class "Currency"
-BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
-SetTextColor 220 190 132
-SetFontSize 35
-
-# Currency Tier C: Vaal, Chaos, Exalt, Exotic
-Show
-Class "Currency"
-BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
-SetTextColor 220 190 132
-MinimapIcon 2 Grey Circle
-SetFontSize 35
+MinimapIcon 1 White Circle
+DisableDropSound True
+CustomAlertSound "essence.mp3" 283
 
 Show
 Class "Currency"
-BaseType "Scroll of Wisdom" "Shard"
-
-# Unknown currency
-Show
-Class "Currency"
+BaseType "Breach Splinter" " Artifact"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
-PlayAlertSound 2 300
-PlayEffect Pink
-MinimapIcon 1 White Circle
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Wisdom"
+SetFontSize 35
+SetBorderColor 200 100 60 255
+SetBackgroundColor 50 5 5 255
 
 Show
 Class "Pinnacle Keys"
@@ -349,6 +584,9 @@ Rarity <= Rare
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
 SetFontSize 35
+MinimapIcon 1 Red Circle
+DisableDropSound True
+CustomAlertSound "map_high.mp3" 300
 
 Show
 WaystoneTier < 5
@@ -358,6 +596,9 @@ Rarity <= Rare
 SetTextColor 255 255 255
 SetBorderColor 255 255 255
 SetFontSize 35
+MinimapIcon 1 Yellow Circle
+DisableDropSound True
+CustomAlertSound "map_medium.mp3" 300
 
 Show
 BaseType "Waystone"
@@ -368,6 +609,9 @@ PlayAlertSound 4 300
 PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
+MinimapIcon 1 White Circle
+DisableDropSound True
+CustomAlertSound "map_low.mp3" 300
 
 #--------------------------
 # Value Rares
@@ -424,21 +668,15 @@ Rarity Magic
 SetBorderColor 0 0 200
 SetFontSize 35
 
-#--------------------------
-# Random Rares
-#--------------------------
-
-## Uncomment this rule to hide low level rares in high level zones
-
-# Hide
-# Rarity Rare
-# DropLevel < 50
-# AreaLevel > 72
-# SetFontSize 35
-
+# Unknown currency
 Show
-Rarity Rare
-SetFontSize 35
+Class "Currency"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect Pink
+MinimapIcon 1 White Circle
 
 #--------------------------
 # Hide Rules (only high level), super light edition
@@ -486,6 +724,7 @@ AreaLevel > 70
 Rarity <= Normal
 DropLevel < 50
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+
 
 #--------------------------
 # OPTIONAL RULES
