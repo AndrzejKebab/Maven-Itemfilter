@@ -1,7 +1,7 @@
 #===============================================================================================================
 # NeverSink's Indepth Loot Filter - for Path of Exile 2 Maven Edition
 #===============================================================================================================
-# VERSION:  0.2.1Maven
+# VERSION:  0.2.3Maven
 # TYPE:     NONE
 # STYLE:    DEFAULT
 # AUTHOR:   NeverSink, AndrzejKebab
@@ -563,7 +563,17 @@ MinimapIcon 1 Yellow Square
 SetFontSize 40
 
 Show
-BaseType "Simulacrum" " Tablet" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" "Test of"
+BaseType "Simulacrum" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" "Test of"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 300
+PlayEffect Purple
+MinimapIcon 1 Purple Square
+SetFontSize 45
+
+Show
+Class  "Tablet"
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
@@ -651,6 +661,18 @@ Rarity Magic
 SetFontSize 40
 
 #--------------------------
+# High Level Implicit Body Armours
+# Has a free extra mod for crafting endgame gear
+#--------------------------
+Show
+Class "Body Armours"
+DropLevel >= 65
+HasImplicitMod True
+SetFontSize 40
+SetTextColor 233 206 75
+SetBorderColor 233 206 75
+
+#--------------------------
 # Salvagable Items
 #--------------------------
 
@@ -661,7 +683,7 @@ SetBorderColor 200 200 200
 SetFontSize 35
 
 Show
-Quality > 1
+Quality > 0
 Rarity Normal
 SetBorderColor 200 200 200
 SetFontSize 35
@@ -673,7 +695,7 @@ SetBorderColor 0 0 200
 SetFontSize 35
 
 Show
-Quality > 1
+Quality > 0
 Rarity Magic
 SetBorderColor 0 0 200
 SetFontSize 35
@@ -701,7 +723,7 @@ Class "Flasks"
 Hide
 AreaLevel >= 78
 Rarity <= Magic
-DropLevel < 70
+DropLevel < 65
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
 Hide
