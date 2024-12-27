@@ -230,7 +230,7 @@ SetBackgroundColor 253 199 33 255
 PlayEffect White
 MinimapIcon 0 Yellow Circle
 DisableDropSound True
-CustomAlertSound "Maven_map_low.ogg" 283
+CustomAlertSound "Maven_chaos3.ogg" 283
 
 Show
 Class "Currency"
@@ -493,15 +493,6 @@ MinimapIcon 2 White Circle
 SetFontSize 40
 
 #--------------------------
-# Scroll of Wisdom High Level Hiding
-#--------------------------
-
-Hide
-BaseType "Scroll of Wisdom"
-AreaLevel >= 65
-Rarity <= Magic
-
-#--------------------------
 # Other
 #--------------------------
 
@@ -530,9 +521,17 @@ CustomAlertSound "Maven_essence.ogg" 283
 
 Show
 Class "Currency"
-BaseType "Breach Splinter" " Artifact"
+BaseType " Artifact"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
+MinimapIcon 2 Grey Circle
+
+Show
+Class "Currency"
+BaseType "Breach Splinter"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
 MinimapIcon 2 Grey Circle
 
 Show
@@ -664,13 +663,13 @@ SetFontSize 40
 # High Level Implicit Body Armours
 # Has a free extra mod for crafting endgame gear
 #--------------------------
-Show
-Class "Body Armours"
-DropLevel >= 65
-HasImplicitMod True
-SetFontSize 40
-SetTextColor 233 206 75
-SetBorderColor 233 206 75
+#Show
+#Class "Body Armours"
+#DropLevel >= 65
+#HasImplicitMod True
+#SetFontSize 40
+#SetTextColor 233 206 75
+#SetBorderColor 233 206 75
 
 #--------------------------
 # Salvagable Items
@@ -757,6 +756,14 @@ Rarity <= Normal
 DropLevel < 50
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
+#--------------------------
+# Scroll of Wisdom High Level Hiding
+#--------------------------
+
+Hide
+BaseType "Scroll of Wisdom"
+AreaLevel >= 65
+Rarity <= Magic
 
 #--------------------------
 # OPTIONAL RULES
@@ -789,4 +796,4 @@ Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One 
 # Get a new filter from www.filterblade.xyz
 
 Show
-BaseType == "Expert Laced Boots"
+BaseType == "Expert Dyad Crossbow"
